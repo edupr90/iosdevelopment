@@ -59,10 +59,10 @@
 				F119D665229F6244007A49DB /* AppDelegate.swift */,
 				F119D667229F6244007A49DB /* ViewController.swift */,
 				F119D669229F6244007A49DB /* Main.storyboard */,
+				F119D67722A0B829007A49DB /* Story.swift */,
 				F119D66C229F6245007A49DB /* Assets.xcassets */,
 				F119D66E229F6245007A49DB /* LaunchScreen.storyboard */,
 				F119D671229F6245007A49DB /* Info.plist */,
-				F119D67722A0B829007A49DB /* Story.swift */,
 			);
 			path = InteractiveStory;
 			sourceTree = "<group>";
