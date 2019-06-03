@@ -52,7 +52,7 @@ extension Story{
         case .homeward:
             return "You continue your course to Earth. Two days later, you receive a transmission from HQ saing that they have detected some sort of anomaly on the surface of Mars near an abandoned rover. They ask you to investigate, but ultimately the decision is yours because your mission has already run much longer than planned and supplies are low."
         case .rover:
-            return "The rover is covered in dust and most of the solar panels are broken. But you are quite surprised to see the on-board system booted up and running. In fact, there is a message on the screen. Come to 28.2342, -81.08273. These coordinates arent far but you dont know if your oxygen will last there and back."
+            return "The rover is covered in dust and most of the solar panels are broken. But you are quite surprised to see the on-board system booted up and running. In fact, there is a message on the screen. Come to 28.2342, -81.08273. \These coordinates aren\t far but you dont know if your oxygen will last there and back."
         case .cave:
             return "Your EVA suit is equipped with a headlamp which you use to navigate to a cave. After searching for a while your oxygen levels are starting to get pretty low. You know you should go refill your tank, but there's a faint light up ahead."
         case .crate:
