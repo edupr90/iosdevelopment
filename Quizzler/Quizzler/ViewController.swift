@@ -4,6 +4,7 @@
 //
 //  Created by Angela Yu on 25/08/2015.
 //  Copyright (c) 2015 London App Brewery. All rights reserved.
+//  Student: Eduardo Velez
 //
 
 import UIKit
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     let allQuestion = QuestionBank()
     var pickedAnswer : Bool = false
     var questionNumber : Int = 0
+    var score : Int = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -22,8 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let firstQuestion = allQuestion.list[0]
-        questionLabel.text = firstQuestion.questionText
+        nextQuestion()
     }
 
 
@@ -36,24 +37,29 @@ class ViewController: UIViewController {
         }
         checkAnswer()
         
-        questionNumber = questionNumber + 1
+        questionNumber += 1
         nextQuestion()
     }
     
     
     func updateUI() {
-      
+        scoreLabel.text = "Score: \(score)"
+        progressLabel.text = "\(questionNumber + 1)"
+        
+        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber)
     }
     
 
     func nextQuestion() {
         if questionNumber <= 12 {
             questionLabel.text = allQuestion.list[questionNumber].questionText
+            updateUI()
         }
         else {
             let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do yo want to start over?", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
                 self.startOver()
+                
             }
             alert.addAction(restartAction)
             present(alert,animated: true,completion: nil)
@@ -64,13 +70,14 @@ class ViewController: UIViewController {
     
     func checkAnswer() {
         
-        let correctAnswer = allQuestion.list[questionNumber - 1].answer
+        let correctAnswer = allQuestion.list[questionNumber].answer
         
         if correctAnswer == pickedAnswer {
-            
+            ProgressHUD.showSuccess("Correct")
+            score += 1
         }
         else{
-            
+            ProgressHUD.showError("Wrong!")
         }
         
     }
@@ -78,6 +85,7 @@ class ViewController: UIViewController {
     
     func startOver() {
        questionNumber = 0
+       score = 0
        nextQuestion()
     }
     
