@@ -47,7 +47,6 @@ class ViewController: UIViewController {
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
       
         restart()
-        restartButton.isHidden = true
         
     }
 
@@ -108,6 +107,7 @@ class ViewController: UIViewController {
         storyIndex = 1
         topButton.isHidden = false
         bottomButton.isHidden = false
+        restartButton.isHidden = true
     }
     
 
