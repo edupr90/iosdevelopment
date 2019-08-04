@@ -52,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-0E-eCu">
-                                        <rect key="frame" x="87" y="135" width="240.00000000000006" height="128"/>
+                                        <rect key="frame" x="87" y="135" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="NXl-fI-gDs"/>
                                             <constraint firstAttribute="height" constant="128" id="kUn-zI-5hD"/>
